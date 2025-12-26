@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website Portfolio | Home Page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/projects.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="lib/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <!-- LIST OF PROJECTS -->
+    <body>
+        <div id="header">
+            <h1>PROJECTS</h1>
+            <div class="header-subtitle">Portfolio Showcase</div>
+        </div>
+
+        <div class="container">
+            <div class = "projects_list">
+                <!-- DEARS -->
+                <div class="project_card" onclick="openModal('dears-modal')">
+                    <img src="" alt="">
+                    <div class="project_name">DEARS</div>
+                    <img class="card_cover" src="images/DEARS_main.png" alt="DEARS_cover">
+                    <div class="tech_stack">
+                        <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                        <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                        <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
+                        <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
+                    </div>
+                    <div class="description">
+                        An Android chat pet app where users can feed, play, chat, and make their pets
+                        go to sleep. 
+                    </div>
+                    <a class="project_link" href="https://github.com/dyun2022/DEARS">GitHub Link</a>
+                </div>
+
+                <!-- Research -->
+                <div class="project_card">
+                    <div class="project_name">Dialogue-Based Country Prediction Using NLP and ML</div>
+                    <img class="card_cover" src="images/research_main.png" alt="research_cover">
+                    <div class="tech_stack">
+                        <span class="badge badge-pill tech-badge badge-python">Python</span>
+                        <span class="badge badge-pill tech-badge badge-nlp">NLP</span>
+                        <span class="badge badge-pill tech-badge badge-ml">ML Models</span>
+                    </div>
+                    <div class="description">
+                        Built several Python scripts to analyze dialogue datasets and predict country-level
+                        cultural patterns using embedding-based features (OpenAI API) and machine learning models. 
+                    </div>
+                </div>
+
+                <!-- CSCI201 -->
+                <div class="project_card">
+                    <img src="" alt="">
+                    <div class="project_name">Tasky</div>
+                    <img class="card_cover" src="images/CSCI201_main.png" alt="CSCI201_cover">
+                    <div class="tech_stack">
+                        <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                        <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                        <span class="badge badge-pill tech-badge badge-api">API</span>
+                        <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
+                        <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
+                    </div>
+                    <div class="description">
+                        A website where the user can manage their projects, tasks, and group members.
+                        Includes several features such as adding group members through a share code,
+                        adding/deleting tasks, transferring ownership of projects, and more. 
+                    </div>
+                    <a class="project_link" href="https://github.com/danielho774/csci201teamproject">GitHub Link</a>
+                </div>
+
+                <!-- AthenaHacks -->
+                <div class="project_card">
+                    <img src="" alt="">
+                    <div class="project_name">Froggy Slides</div>
+                    <img class="card_cover" src="images/AH_main.png" alt="AH_cover">
+                    <div class="tech_stack">
+                        <span class="badge badge-pill tech-badge badge-html">HTML</span>
+                        <span class="badge badge-pill tech-badge badge-css">CSS</span>
+                        <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                        <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                    </div>
+                    <div class="description">
+                        A simple flash card website to help with studying!
+                    </div>
+                    <a class="project_link" href="https://github.com/dyun2022/Athena-Hackathon-2025">GitHub Link</a>
+                </div>
+
+                <!-- ITP303 -->
+                <div class="project_card">
+                    <img src="" alt="">
+                    <div class="project_name">Lvl&infin;nity</div>
+                    <img class="card_cover" src="images/ITP303_main.png" alt="ITP303_cover">
+                    <div class="tech_stack">
+                        <span class="badge badge-pill tech-badge badge-html">HTML</span>
+                        <span class="badge badge-pill tech-badge badge-css">CSS</span>
+                        <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                        <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                        <span class="badge badge-pill tech-badge badge-php">PHP</span>
+                    </div>
+                    <div class="description">
+                        Personalized website for organizing the games the user has played and 
+                        their reviews. Additional feature where user can search for games by 
+                        different categories.  
+                    </div>
+                    <a class="project_link" href="https://github.com/dyun2022/ITP303-Final-Project">GitHub Link</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEARS Description Card -->
+        <div id="modal-overlay" onclick="closeModal()"></div>
+        <div id="dears-modal" class="project-modal">
+            <button class="modal-close" onclick="closeModal()">x</button>
+
+            <h2>DEARS</h2>
+            <p class="modal-subtitle">Android Chat Pet Application</p>
+            <img src="images/DEARS_main.png" alt="DEARS_main" class="modal-image">
+            <div class="modal-tech">
+                <span class="badge badge-pill tech-badge badge-python">Python</span>
+                <span class="badge badge-pill tech-badge badge-nlp">NLP</span>
+                <span class="badge badge-pill tech-badge badge-ml">ML Models</span>
+            </div>
+
+            <p class="modal-description">
+                An Android chat pet app where users can feed, play, chat, and make their pets
+                go to sleep. 
+            </p>
+
+            <p class="modal-description">
+                The part that I was in charge with was most of the backend, creating the database
+                for the app, and creating all the API routes. I used SpringBoot for the backend 
+                setup and coded in JavaScript for all of the backend code. I used SQL to create the
+                database.
+            </p>
+
+            <pre class="code-block">
+                <code>
+CREATE DATABASE IF NOT EXISTS dears;
+USE dears;
+
+CREATE TABLE Users(
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(25) NOT NULL,
+    password VARCHAR(25) NOT NULL,
+    avatar VARCHAR(25) NOT NULL,
+    birthday DATE NOT NULL
+);
+
+CREATE TABLE PetType(
+    type_id INT AUTO_INCREMENT PRIMARY KEY,
+    type_name VARCHAR(25) NOT NULL
+);
+INSERT INTO PetType(type_name) VALUES
+    ('Deer'),
+    ('Bear');
+
+CREATE TABLE Food(
+    food_id INT AUTO_INCREMENT PRIMARY KEY,
+    type VARCHAR(25) NOT NULL,
+    food_points INT NOT NULL
+);
+INSERT INTO Food(type, food_points) VALUES
+    ('tree bark', 5),
+    ('berries', 10),
+    ('mushroom', 20),
+    ('honey', 5),
+    ('salmon', 20);
+
+CREATE TABLE AgeStage(
+    age_id INT AUTO_INCREMENT PRIMARY KEY,
+    age_stage VARCHAR(25) NOT NULL,
+    meter_max INT NOT NULL
+);
+INSERT INTO AgeStage(age_stage, meter_max) VALUES
+    ('baby', 10),
+    ('teen', 20),
+    ('adult', 40);
+
+CREATE TABLE Pet(
+    pet_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    type VARCHAR(25) NOT NULL,
+    name VARCHAR(25) NOT NULL,
+    growth_points INT NOT NULL,
+    age_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (age_id) REFERENCES AgeStage(age_id)
+);
+
+CREATE TABLE Happiness(
+    happiness_id INT AUTO_INCREMENT PRIMARY KEY,
+    age_id INT NOT NULL,
+    meter_max INT NOT NULL,
+    FOREIGN KEY (age_id) REFERENCES AgeStage(age_id)
+);
+INSERT INTO Happiness(meter_max, age_id) VALUES
+    (10, 1),
+    (20, 2),
+    (40, 3);
+
+CREATE TABLE Energy(
+    energy_id INT AUTO_INCREMENT PRIMARY KEY,
+    age_id INT NOT NULL,
+    meter_max INT NOT NULL,
+    FOREIGN KEY (age_id) REFERENCES AgeStage(age_id)
+);
+INSERT INTO Energy(meter_max, age_id) VALUES
+    (10, 1),
+    (20, 2),
+    (40, 3);
+
+CREATE TABLE Hunger(
+    hunger_id INT AUTO_INCREMENT PRIMARY KEY,
+    age_id INT NOT NULL,
+    meter_max INT NOT NULL,
+    FOREIGN KEY (age_id) REFERENCES AgeStage(age_id)
+);
+INSERT INTO Hunger(meter_max, age_id) VALUES
+    (10, 1),
+    (20, 2),
+    (40, 3);
+
+CREATE TABLE Journal(
+    journal_id INT AUTO_INCREMENT PRIMARY KEY,
+    pet_id INT NOT NULL,
+    name VARCHAR(25) NOT NULL,
+    FOREIGN KEY (pet_id) REFERENCES Pet(pet_id)
+);
+
+CREATE TABLE Entry(
+    entry_id INT AUTO_INCREMENT PRIMARY KEY,
+    journal_id INT NOT NULL,
+    date DATE NOT NULL,
+    summary VARCHAR(150) NOT NULL,
+    mood VARCHAR(150) NOT NULL,
+    FOREIGN KEY (journal_id) REFERENCES Journal(journal_id)
+);
+
+CREATE TABLE ChatChoices(
+    chat_id INT AUTO_INCREMENT PRIMARY KEY,
+    choice VARCHAR(150) NOT NULL
+);
+INSERT INTO ChatChoices(choice) VALUE
+    ('Hello'),
+    ('How are you?'),
+    ('Tell me a joke!');
+
+CREATE TABLE History(
+    history_id INT AUTO_INCREMENT PRIMARY KEY,
+    chat_id INT NOT NULL,
+    history VARCHAR(255) NOT NULL,
+    FOREIGN KEY(chat_id) REFERENCES ChatChoices(chat_id)
+);
+                </code>
+            </pre>
+
+            <p class="modal-description">
+                The above shows the database I created using SQL. Most of the relationships were 
+                one-to-one since for our project we made it so that there's one pet for each user. 
+            </p>
+
+            <img src="images/DEARS_UML_Class.png" alt="DEARS_UML" class="modal-image">
+
+            <p class="modal-description">
+                The diagram above shows the UML diagram for our app. I was in charge of coding the primary
+                pet and user features which includes everything on the backend side except for Journal and 
+                Chat related code. I also created all the API connections for every object. 
+            </p>
+
+            <div class="modal-links">
+                <a class="project_link" href="https://github.com/dyun2022/DEARS">GitHub Link</a>
+            </div>
+        </div>
+
+        <!-- Research Description Card -->
+         <!-- DEARS Description Card -->
+        <div id="modal-overlay" onclick="closeModal()"></div>
+        <div id="dears-modal" class="project-modal">
+            <button class="modal-close" onclick="closeModal()">x</button>
+
+            <h2>Dialogue-Based Country Prediction Using NLP and ML</h2>
+            <img src="images/research_main.png" alt="research_main" class="modal-image">
+            <div class="modal-tech">
+                <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
+                <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
+            </div>
+
+            <p class="modal-description">
+                Built several Python scripts to analyze dialogue datasets and predict country-level
+                cultural patterns using embedding-based features (OpenAI API) and machine learning models.  
+            </p>
+
+            <p class="modal-description">
+                
+            </p>
+        </div>
+
+        <!-- JAVASCRIPT -->
+         <script>
+            function openModal(id) {
+                document.getElementById("modal-overlay").classList.add("active"); 
+                document.getElementById(id).classList.add("active"); 
+            }
+
+            function closeModal() {
+                document.getElementById("modal-overlay").classList.remove("active"); 
+                document.querySelectorAll(".project-modal").forEach(m => {
+                    m.classList.remove("active"); 
+                }); 
+            }
+         </script>
+
+    </body>
+</html>
