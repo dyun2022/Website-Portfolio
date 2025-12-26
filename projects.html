@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles/projects.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="lib/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet">
     </head>
 
     <!-- LIST OF PROJECTS -->
@@ -36,7 +37,7 @@
                 </div>
 
                 <!-- Research -->
-                <div class="project_card">
+                <div class="project_card" onclick="openModal('research-modal')">
                     <div class="project_name">Dialogue-Based Country Prediction Using NLP and ML</div>
                     <img class="card_cover" src="images/research_main.png" alt="research_cover">
                     <div class="tech_stack">
@@ -51,7 +52,7 @@
                 </div>
 
                 <!-- CSCI201 -->
-                <div class="project_card">
+                <div class="project_card" onclick="openModal('tasky-modal')"">
                     <img src="" alt="">
                     <div class="project_name">Tasky</div>
                     <img class="card_cover" src="images/CSCI201_main.png" alt="CSCI201_cover">
@@ -61,6 +62,7 @@
                         <span class="badge badge-pill tech-badge badge-api">API</span>
                         <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
                         <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
+                        <span class="badge badge-pill tech-badge badge-react">React</span>
                     </div>
                     <div class="description">
                         A website where the user can manage their projects, tasks, and group members.
@@ -118,9 +120,10 @@
             <p class="modal-subtitle">Android Chat Pet Application</p>
             <img src="images/DEARS_main.png" alt="DEARS_main" class="modal-image">
             <div class="modal-tech">
-                <span class="badge badge-pill tech-badge badge-python">Python</span>
-                <span class="badge badge-pill tech-badge badge-nlp">NLP</span>
-                <span class="badge badge-pill tech-badge badge-ml">ML Models</span>
+                <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
+                <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
             </div>
 
             <p class="modal-description">
@@ -128,15 +131,18 @@
                 go to sleep. 
             </p>
 
+            <h3>Summary</h3>
             <p class="modal-description">
-                The part that I was in charge with was most of the backend, creating the database
-                for the app, and creating all the API routes. I used SpringBoot for the backend 
-                setup and coded in JavaScript for all of the backend code. I used SQL to create the
-                database.
+                This project was done at USC with a team of five group members. We were tasked with 
+                building an Android chat pet app. The part that I was in charge with was most of the 
+                backend, creating the database for the app, and creating all the API routes. I used 
+                SpringBoot for the backend setup and coded in JavaScript for all of the backend code. 
+                I used SQL to create the database.
             </p>
 
-            <pre class="code-block">
-                <code>
+            <h3>Creating the Dataset</h3>
+            <pre class="code-block code-block-sql">
+                <code class="language-sql">
 CREATE DATABASE IF NOT EXISTS dears;
 USE dears;
 
@@ -261,6 +267,7 @@ CREATE TABLE History(
                 one-to-one since for our project we made it so that there's one pet for each user. 
             </p>
 
+            <h3>UML Diagram for the App</h3>
             <img src="images/DEARS_UML_Class.png" alt="DEARS_UML" class="modal-image">
 
             <p class="modal-description">
@@ -277,16 +284,15 @@ CREATE TABLE History(
         <!-- Research Description Card -->
          <!-- DEARS Description Card -->
         <div id="modal-overlay" onclick="closeModal()"></div>
-        <div id="dears-modal" class="project-modal">
+        <div id="research-modal" class="project-modal">
             <button class="modal-close" onclick="closeModal()">x</button>
 
             <h2>Dialogue-Based Country Prediction Using NLP and ML</h2>
             <img src="images/research_main.png" alt="research_main" class="modal-image">
             <div class="modal-tech">
-                <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
-                <span class="badge badge-pill tech-badge badge-sql">SQL</span>
-                <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
-                <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
+                <span class="badge badge-pill tech-badge badge-python">Python</span>
+                <span class="badge badge-pill tech-badge badge-nlp">NLP</span>
+                <span class="badge badge-pill tech-badge badge-ml">ML Models</span>
             </div>
 
             <p class="modal-description">
@@ -294,13 +300,145 @@ CREATE TABLE History(
                 cultural patterns using embedding-based features (OpenAI API) and machine learning models.  
             </p>
 
+            <h3>Summary</h3>
             <p class="modal-description">
-                
+                This project was during my internship as an A.I. Researcher under Professor Jonathan Gratch 
+                at University of Southern California. During this internship, I was given a large dataset of
+                buyers and sellers from different countries. Besides data about where the buyer/seller was from
+                and the dialog between them, there were other variables such as education levels, risk aversion score, 
+                gender, and more. 
+            </p>
+
+            <h3>Using Embedded Classification</h3>
+            <pre class="code-block code-block-python">
+                <code class="language-python">
+# Compute confusion matrix
+cf_matrix = confusion_matrix(y_true, y_pred, labels=labels)
+
+# Create flattened counts and percentages
+group_counts = ["{0:0.0f}".format(value) for value in cf_matrix.flatten()]
+group_percentages = ["{0:.1%}".format(value) for value in cf_matrix.flatten()/np.sum(cf_matrix)]
+group_labels = [f"{v1}\n{v2}" for v1, v2 in zip(group_counts, group_percentages)]
+group_labels = np.asarray(group_labels).reshape(len(labels), len(labels))
+
+# Plot heatmap
+plt.figure(figsize=(8, 6))
+sns.heatmap(cf_matrix, annot=group_labels, fmt='', cmap='Blues', xticklabels=labels, yticklabels=labels)
+plt.ylabel("True")
+plt.xlabel("Predicted")
+plt.title("Confusion Matrix")
+plt.show()
+                </code>
+            </pre>
+
+            <p class="modal-description">
+                One of my first tasks was to pull 80 pairs of buyers and sellers who were from the same 
+                country. Then I would do embedded classification on them using the OpenAI API. I would
+                share these results by creating a confusion matrix to show my professor. Additionally, 
+                from those results, I also had to do an analysis on why the AI made mistakes on some of 
+                the predictions and form a pattern. 
+            </p>
+            <p class="modal-description">
+                During the first phase of my research, I refined my code to do both logistic and linear 
+                regression to analyze the predicted results with different variables (buyer/seller education
+                levels, risk aversion score, etc.). For the logistic regression analyses, I would use confusion
+                matrices to show the results and for the linear regression analyses I would use plot graphs. 
+            </p>
+
+            <h3>Testing with Other Models</h3>
+            <p class="modal-description">
+                During the second phase of my research, I made the same analyses using different models. I created
+                Python scripts using SVM and Random Forest models that tested the same predictions as before. With 
+                these results, my professor was able to compare how each of the models performed.  
             </p>
         </div>
 
+        <!-- Tasky Description Card -->
+        <div id="modal-overlay" onclick="closeModal()"></div>
+        <div id="tasky-modal" class="project-modal">
+            <button class="modal-close" onclick="closeModal()">x</button>
+
+            <h2>Tasky</h2>
+            <img src="images/CSCI201_main.png" alt="CSCI201_main" class="modal-image">
+            <div class="modal-tech">
+                <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                <span class="badge badge-pill tech-badge badge-api">API</span>
+                <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
+                <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
+                <span class="badge badge-pill tech-badge badge-react">React</span>
+            </div>
+
+            <p class="modal-description">
+                A website where the user can manage their projects, tasks, and group members.
+                Includes several features such as adding group members through a share code,
+                adding/deleting tasks, transferring ownership of projects, and more.  
+            </p>
+
+            <h3>Summary</h3>
+            <p class="modal-description">
+                This project was done at USC with a team of nine group members. We were tasked with 
+                building a website of our choice. As a team member, I played the role of a team leader 
+                by leading the group efficiently to ensure that we made submissions on time. I was the 
+                bridge of communication between the frontend and backend teams. Additionally, as the 
+                creator of the database and a member of the backend team, I was the main source to answers 
+                to questions about the relationships between different variables and how to connect with the backend.  
+            </p>
+            <p class="modal-description">
+                The part that I was in charge of was creating the database for the website and the 
+                backend code for the user. I also took charge in creating some of the API routes 
+                and some of the frontend logic (i.e. transferring ownership of projects, adjusting API 
+                connections, etc.). I also helped fix various backend issues within the backend team.
+            </p>
+
+            <h3>Creating the Database</h3>
+            <img src="images/CSCI201 Project Database.png" alt="CSCI201_database" class="modal-image">
+            <p class="modal-description">
+                The above diagram shows the database I designed for this project. Since each user could be 
+                a member of or own various projects and be in charge of several tasks, we had many one-to-many
+                and many-to-many relationships. 
+            </p>
+
+            <h3>Backend for the User</h3>
+            <pre class="code-block code-block-javascript">
+                <code class="language-javascript">
+@JsonIgnore
+@OneToMany(mappedBy = "user", cascade = CascadeType.ALL) 
+private List<Availability> availability = new ArrayList<>(); 
+
+@JsonIgnore
+@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+private List<ProjectMember> memberships = new ArrayList<>(); 
+	
+public User(int userID, String username, String email, boolean isGuest) {
+	this.userID = userID; 
+	this.username = username; 
+	this.email = email; 
+	this.isGuest = isGuest; 
+}
+                </code>
+            </pre>
+            <p class="modal-description">
+                The above code shows the part of the User model where I created the 
+                relationships for the user. 
+            </p>
+
+            <h3>Transferring Ownership</h3>
+            <img src="images/CSCI201_ownership.png" alt="CSCI201_ownership" class="modal-image">
+            <p class="modal-description">
+                Transferring ownership of a project was one of the many important features that 
+                were implemented for this project. For this part, I took charge within the 
+                frontend team. This gave me the opportunity to learn React which I was not familiar 
+                with at first but quickly got the grasp of. 
+            </p>
+
+            <div class="modal-links">
+                <a class="project_link" href="https://github.com/danielho774/csci201teamproject">GitHub Link</a>
+            </div>
+        </div>
+
         <!-- JAVASCRIPT -->
-         <script>
+        <script>
             function openModal(id) {
                 document.getElementById("modal-overlay").classList.add("active"); 
                 document.getElementById(id).classList.add("active"); 
@@ -312,7 +450,10 @@ CREATE TABLE History(
                     m.classList.remove("active"); 
                 }); 
             }
-         </script>
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
 
     </body>
 </html>
