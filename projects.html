@@ -52,7 +52,7 @@
                 </div>
 
                 <!-- CSCI201 -->
-                <div class="project_card" onclick="openModal('tasky-modal')"">
+                <div class="project_card" onclick="openModal('tasky-modal')">
                     <img src="" alt="">
                     <div class="project_name">Tasky</div>
                     <img class="card_cover" src="images/CSCI201_main.png" alt="CSCI201_cover">
@@ -73,7 +73,7 @@
                 </div>
 
                 <!-- AthenaHacks -->
-                <div class="project_card">
+                <div class="project_card" onclick="openModal('froggy-modal')">
                     <img src="" alt="">
                     <div class="project_name">Froggy Slides</div>
                     <img class="card_cover" src="images/AH_main.png" alt="AH_cover">
@@ -282,7 +282,6 @@ CREATE TABLE History(
         </div>
 
         <!-- Research Description Card -->
-         <!-- DEARS Description Card -->
         <div id="modal-overlay" onclick="closeModal()"></div>
         <div id="research-modal" class="project-modal">
             <button class="modal-close" onclick="closeModal()">x</button>
@@ -434,6 +433,51 @@ public User(int userID, String username, String email, boolean isGuest) {
 
             <div class="modal-links">
                 <a class="project_link" href="https://github.com/danielho774/csci201teamproject">GitHub Link</a>
+            </div>
+        </div>
+
+        <!-- Froggy Slides Description Card -->
+        <div id="modal-overlay" onclick="closeModal()"></div>
+        <div id="froggy-modal" class="project-modal">
+            <button class="modal-close" onclick="closeModal()">x</button>
+
+            <h2>Froggy Slides</h2>
+            <img src="images/AH_main.png" alt="AH_main" class="modal-image">
+            <div class="modal-tech">
+                <span class="badge badge-pill tech-badge badge-html">HTML</span>
+                <span class="badge badge-pill tech-badge badge-css">CSS</span>
+                <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+            </div>
+
+            <p class="modal-description">
+                A simple flash card website to help with studying!
+            </p>
+
+            <h3>Summary</h3>
+            <p class="modal-description">
+                This project was for the 2025 Athena Hackathon at University of Southern 
+                California. For this project, I worked with a team of four to create a 
+                simple and fun project. The part that I was a full-stack developer working 
+                on the pages for creating the deck and displaying it.  
+            </p>
+
+            <h3>Creating the Deck</h3>
+            <img src="images/AH_image_1.png" alt="AH_image_1" class="modal-image">
+            <p class="modal-description">
+                On this page, users would be able to name their deck, enter a word and defintion, 
+                and then add it to their deck which would be displayed as a list below. 
+            </p>
+
+            <h3>Displaying the Deck</h3>
+            <img src="images/AH_image_2.png" alt="AH_image_2" class="modal-image">
+            <p class="modal-description">
+                On this page, users would be able to see the deck that they had made. If they 
+                clicked on a card, the card would flip over to reveal the definition. 
+            </p>
+            
+            <div class="modal-links">
+                <a class="project_link" href="https://github.com/dyun2022/Athena-Hackathon-2025">GitHub Link</a>
             </div>
         </div>
 
