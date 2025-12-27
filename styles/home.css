@@ -147,7 +147,6 @@ body {
     animation: fadeUp 1s ease forwards;
 }
 
-/* NAME */
 #header h1 {
     font-size: clamp(3rem, 6vw, 4.5rem);
     font-weight: 800;
@@ -159,7 +158,6 @@ body {
     background-clip: text;
 }
 
-/* SUBTITLE */
 .subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 1.15rem;
@@ -169,7 +167,6 @@ body {
     margin: 0 auto 1.5rem;
 }
 
-/* INTRO */
 .intro {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
@@ -179,7 +176,6 @@ body {
     line-height: 1.6;
 }
 
-/* TECH PREVIEW */
 .tech-preview {
     display: flex;
     flex-wrap: wrap;
@@ -193,7 +189,6 @@ body {
     cursor: default;
 }
 
-/* Button Styles for Projects Page */
 .projects_button {
     display: flex;
     gap: 20px;
@@ -217,7 +212,6 @@ body {
     min-width: 180px;
 }
 
-/* Primary Button - Filled Style */
 .primary-btn {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(168, 85, 247, 0.9));
     border-color: rgba(99, 102, 241, 0.6);
@@ -249,6 +243,7 @@ body {
         0 0 40px rgba(168, 85, 247, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     border-color: rgba(168, 85, 247, 0.8);
+    color: #0f172a;
 }
 
 .ghost-btn {
