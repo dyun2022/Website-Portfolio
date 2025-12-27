@@ -12,6 +12,10 @@
     <!-- LIST OF PROJECTS -->
     <body>
         <div id="header">
+            <a href="home.html" class="home-link">
+                <span class="oi oi-arrow-left">Home</span>
+            </a>
+
             <h1>PROJECTS</h1>
             <div class="header-subtitle">Portfolio Showcase</div>
         </div>
@@ -90,7 +94,7 @@
                 </div>
 
                 <!-- ITP303 -->
-                <div class="project_card">
+                <div class="project_card" onclick="openModal('lvl-modal')">
                     <img src="" alt="">
                     <div class="project_name">Lvl&infin;nity</div>
                     <img class="card_cover" src="images/ITP303_main.png" alt="ITP303_cover">
@@ -466,7 +470,8 @@ public User(int userID, String username, String email, boolean isGuest) {
             <img src="images/AH_image_1.png" alt="AH_image_1" class="modal-image">
             <p class="modal-description">
                 On this page, users would be able to name their deck, enter a word and defintion, 
-                and then add it to their deck which would be displayed as a list below. 
+                and then add it to their deck which would be displayed as a list below. They would 
+                also be able to do erase a word and definition from the list. 
             </p>
 
             <h3>Displaying the Deck</h3>
@@ -478,6 +483,57 @@ public User(int userID, String username, String email, boolean isGuest) {
             
             <div class="modal-links">
                 <a class="project_link" href="https://github.com/dyun2022/Athena-Hackathon-2025">GitHub Link</a>
+            </div>
+        </div>
+
+        <!-- Lvl&infin;nity Description Card -->
+        <div id="modal-overlay" onclick="closeModal()"></div>
+        <div id="lvl-modal" class="project-modal">
+            <button class="modal-close" onclick="closeModal()">x</button>
+
+            <h2>Froggy Slides</h2>
+            <img src="images/ITP303_main.png" alt="ITP303_main" class="modal-image">
+            <div class="modal-tech">
+                <span class="badge badge-pill tech-badge badge-html">HTML</span>
+                <span class="badge badge-pill tech-badge badge-css">CSS</span>
+                <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                <span class="badge badge-pill tech-badge badge-php">PHP</span>
+            </div>
+
+            <p class="modal-description">
+                Personalized website for organizing the games the user has played and 
+                their reviews. Additional feature where user can search for games by 
+                different categories. 
+            </p>
+
+            <h3>Summary</h3>
+            <p class="modal-description">
+                This project was done at USC as a final project for the ITP303 Web Development 
+                course. I was tasked with building a website of my choice that included certain 
+                features and more. I made my own database of games with variables such as genre,
+                directors, and the release date. 
+            </p>
+
+            <h3>Features</h3>
+            <p class="modal-description">
+                For the search feature, I made a drop-down menu where the user could filter games 
+                by each of the different variables. On the personal diary page, users would be able 
+                to add/delete games that they have played. When adding a game, they could fill out 
+                different sections such as their personal rating and written review. After being added, 
+                these reviews would be displayed as a card on that page. I also added login/register 
+                features to make sure the user would have an account to go back to check out their 
+                game log diary. 
+            </p>
+
+            <h3>Creating the Database</h3>
+            <img src="images/ITP303_image.png" alt="ITP303_image" class="modal-image">
+            <p class="modal-description">
+                The above image shows the database I created for this project.
+            </p>
+            
+            <div class="modal-links">
+                <a class="project_link" href="https://github.com/dyun2022/ITP303-Final-Project">GitHub Link</a>
             </div>
         </div>
 
