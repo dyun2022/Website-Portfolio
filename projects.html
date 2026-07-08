@@ -168,18 +168,18 @@
             </p>
              <pre class="code-block code-block-java">
                 <code class="language-java">
-                    @PostMapping("/login")
-	public ResponseEntity<?> login(@Valid @RequestBody AuthRequest req, HttpSession session) {
-		try {
-			long userId = userServer.login(req.getEmail(), req.getPassword());
-			User user = userRepository.findById(userId).orElseThrow();
-			session.setAttribute("user", userId);
-			String token = jwtTokenProvider.generateToken(req.getEmail());
-			return ResponseEntity.ok(new AuthResponse(userId, req.getEmail(), user.getRole(), token));
-		} catch (Exception e) {
-			return ResponseEntity.status(401).body(e.getMessage());
-		}
+@PostMapping("/login")
+public ResponseEntity<?> login(@Valid @RequestBody AuthRequest req, HttpSession session) {
+    try {
+	    long userId = userServer.login(req.getEmail(), req.getPassword());
+		User user = userRepository.findById(userId).orElseThrow();
+		session.setAttribute("user", userId);
+		String token = jwtTokenProvider.generateToken(req.getEmail());
+		return ResponseEntity.ok(new AuthResponse(userId, req.getEmail(), user.getRole(), token));
+	} catch (Exception e) {
+		return ResponseEntity.status(401).body(e.getMessage());
 	}
+}
                 </code>
             </pre>
         </div>
@@ -625,6 +625,6 @@ public User(int userID, String username, String email, boolean isGuest) {
         <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
-        
+
     </body>
 </html>
