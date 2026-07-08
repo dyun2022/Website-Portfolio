@@ -28,13 +28,29 @@
 
         <div class="container">
             <div class = "projects_list">
+                <!-- Dough to Bread -->
+                <div class="project_card" onclick="openModal('dears-modal')">
+                    <img src="" alt="">
+                    <div class="project_name">DEARS</div>
+                    <img class="card_cover" src="images/DEARS_main.png" alt="DEARS_cover">
+                    <div class="tech_stack">
+                        <span class="badge badge-pill tech-badge badge-java">Java</span>
+                        <span class="badge badge-pill tech-badge badge-sql">SQL</span>
+                        <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
+                        <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
+                    </div>
+                    <div class="description">
+                        An Android chat pet app where users can feed, play, chat, and make their pets
+                        go to sleep. 
+                    </div>
+                </div>
                 <!-- DEARS -->
                 <div class="project_card" onclick="openModal('dears-modal')">
                     <img src="" alt="">
                     <div class="project_name">DEARS</div>
                     <img class="card_cover" src="images/DEARS_main.png" alt="DEARS_cover">
                     <div class="tech_stack">
-                        <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                        <span class="badge badge-pill tech-badge badge-java">Java</span>
                         <span class="badge badge-pill tech-badge badge-sql">SQL</span>
                         <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
                         <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
@@ -68,7 +84,7 @@
                     <img class="card_cover" src="images/CSCI201_main.png" alt="CSCI201_cover">
                     <div class="tech_stack">
                         <span class="badge badge-pill tech-badge badge-sql">SQL</span>
-                        <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                        <span class="badge badge-pill tech-badge badge-java">Java</span>
                         <span class="badge badge-pill tech-badge badge-api">API</span>
                         <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
                         <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
@@ -130,7 +146,7 @@
             <p class="modal-subtitle">Android Chat Pet Application</p>
             <img src="images/DEARS_main.png" alt="DEARS_main" class="modal-image">
             <div class="modal-tech">
-                <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                <span class="badge badge-pill tech-badge badge-java">Java</span>
                 <span class="badge badge-pill tech-badge badge-sql">SQL</span>
                 <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
                 <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
@@ -146,7 +162,7 @@
                 This project was done at USC with a team of five group members. We were tasked with 
                 building an Android chat pet app. The part that I was in charge with was most of the 
                 backend, creating the database for the app, and creating all the API routes. I used 
-                SpringBoot for the backend setup and coded in JavaScript for all of the backend code. 
+                SpringBoot for the backend setup and coded in Java for all of the backend code. 
                 I used SQL to create the database.
             </p>
 
@@ -371,7 +387,7 @@ plt.show()
             <img src="images/CSCI201_main.png" alt="CSCI201_main" class="modal-image">
             <div class="modal-tech">
                 <span class="badge badge-pill tech-badge badge-sql">SQL</span>
-                <span class="badge badge-pill tech-badge badge-javascript">JavaScript</span>
+                <span class="badge badge-pill tech-badge badge-java">Java</span>
                 <span class="badge badge-pill tech-badge badge-api">API</span>
                 <span class="badge badge-pill tech-badge badge-springboot">SpringBoot</span>
                 <span class="badge badge-pill tech-badge badge-gradle">Gradle</span>
@@ -409,8 +425,8 @@ plt.show()
             </p>
 
             <h3>Backend for the User</h3>
-            <pre class="code-block code-block-javascript">
-                <code class="language-javascript">
+            <pre class="code-block code-block-java">
+                <code class="language-java">
 @JsonIgnore
 @OneToMany(mappedBy = "user", cascade = CascadeType.ALL) 
 private List<Availability> availability = new ArrayList<>(); 
