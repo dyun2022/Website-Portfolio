@@ -967,7 +967,7 @@ h1 {
   color: #4fc1ff;
 }
 
-.code-block-javascript {
+.code-block-java {
   background: linear-gradient(
     145deg,
     rgba(15, 15, 25, 0.95),
@@ -984,8 +984,8 @@ h1 {
   max-height: 260px;
 }
 
-.code-block-javascript::before {
-  content: "JavaScript";
+.code-block-java::before {
+  content: "Java";
   position: absolute;
   top: 12px;
   right: 15px;
